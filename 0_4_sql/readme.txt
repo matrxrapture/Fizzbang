@@ -15,6 +15,19 @@ Write queries to answer the list of questions below
 5)	Get a breakdown of all sales
 		Per customer
 		Per product
+
+	where the total sales is per customer per product is greater than 100.00
+
+	The result should look as follows:
+		PROD1	CUST001		1416.33
+		PROD2	CUST001		413.55
+		PROD3	CUST001		1565.91
+		PROD2	CUST002		234.5
+		PROD3	CUST002		123.99
+
+6)	Get a breakdown of all sales
+		Per customer
+		Per product
 		For all customers
 		For all product
 
