@@ -1,6 +1,6 @@
 Conway's Game of Life
 ---------------------
-The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+The Game of Life, also known simply as Life, is a cellular automation devised by the British mathematician John Horton Conway in 1970.
 
 The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
 
@@ -17,7 +17,7 @@ What is expected in this test
 -----------------------------
 This test measures your object orientated development skills, working with an existing (and flawed) system and problem solving abilities.
 
-The game has already been implemented, but only partly as there are parts to be implemented to complete the implementation
+The game has partly been implemented.
 
 Implement the following:
 1)	The GetNeighbors method in the World class
