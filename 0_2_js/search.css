@@ -1,0 +1,9 @@
+body {
+	font-family:'Droid Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.search-results, .my-search-results  {
+	width: 400px;
+	float: left;
+}
+
