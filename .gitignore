@@ -64,8 +64,6 @@ ClientBin
 ~$*
 *.dbmdl
 logs/**
-app/packages/**
-packages
 
 Generated_Code #added for RIA/Silverlight projects
 
