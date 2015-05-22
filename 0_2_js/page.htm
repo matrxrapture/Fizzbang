@@ -1,9 +1,57 @@
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="search.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- <script src='search.js' type="javascript"></script>-->
+		<script>
+			$(document).ready(function() {
+			
+			
+				$('#search-button').click(function () {
+			
+					SearchArtist();									
+				});
+				$('#artist-list').on("click",function (event) {
+					
+					var favouriteArtist=$(event.target).attr('data-artistname');
+					$('#my-search-list').append('<li>' + favouriteArtist +'</li>');
+					
+				});
+				
+			});
+		
+			function addToFavoutes(params) {
+				
+			}
+			
+			
+			function SearchArtist() 
+			{
+				var artist_name = $('#q').val();
+				$.ajax(
+					{
+					method: "GET",
+					url:'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist='+ artist_name+ '&api_key=18fe148b510a9409923195592727d7d8&format=json',
+					success:function (result) {
+						if (result) {
+						var artists =result.results.artistmatches.artist;
+							$.each(artists ,function (index,singleArtist) {
+								
+								if(singleArtist.name.length>30)
+								{
+									singleArtist.name=singleArtist.name.substring(0, 26) +"...";
+									}
+								
+								$('#artist-list').append('<li><a href="#" class="addto" data-ArtistName="' + singleArtist.name + '">add to list  </a><span>' + singleArtist.name + '</span></li>');
+			
+							});
+						}
+			
+					}}
+					);
+			}
+		</script>
 	</head>
-
 	<body>
 		<h1>Last.FM artist search</h1>
 		<div>
@@ -11,19 +59,14 @@
 			<input type="input" id="q" />
 			<button id="search-button">Search</button>
 		</div>
-
 		<div class="search-results">
 			<h2>Search results</h2>
-			<ul id="artist-list">
-			</ul>
+			<ul id="artist-list"></ul>
 		</div>
-
 		<div class="my-search-results">
 			<h2>Favourite artists</h2>
-			<ul id="my-search-list">
-			</ul>
+			<ul id="my-search-list"></ul>
 		</div>
-
 	</body>
 
 </html>

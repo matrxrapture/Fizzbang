@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-
+                   using System.Web.Mvc;
 namespace People.Models
 {
     public class PersonFormModel
@@ -30,5 +30,7 @@ namespace People.Models
 
         [DisplayName("ID Number")]
         public string IDNumber { get; set; }
+
+        public SelectList province { get; set; }
     }
 }

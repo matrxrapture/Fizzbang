@@ -1,0 +1,84 @@
+body{
+	  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav
+{font-size: 13pt;
+
+}
+nav {
+  font-size: 13pt;
+  border-bottom: grey 1px solid;
+  list-style: none;
+  margin: 0 0 11px 0;
+  padding: 0 0 10px 0;
+}
+nav ul li {
+	display: inline;
+	  margin-right: 6px;
+	
+}
+nav ul li a {
+	text-decoration: none;
+	padding-bottom: 6px;
+	}
+	nav ul li a:hover{
+		border-bottom: green 4px solid ;
+		
+		
+	};
+	nav ul li a::active {
+	text-decoration: none;
+	}
+	
+	aside{
+		  width: 250px;
+		  margin-right: 20px;
+  float: left;
+  text-align: justify;
+		
+	}
+	/*Form Elements*/
+	.form{
+		width: 500px;
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  float: right;		
+	}
+	.formContainer{
+		margin-top: 20px;
+		display: inline-block;
+		width: 100%;	
+	}
+	.formHeader
+	{
+   font-weight: bold;
+	margin-bottom: 10px;	
+	}
+	.formBody{
+		float: left;
+		
+	}
+	.formControl input{
+		
+	float: right;
+	}
+	.formControl{
+		margin-bottom: 5px;		
+	}
+	.formImage{
+		 width: 150px;
+    height: 200px;
+	float: right;
+	top: -50px;
+	margin-left: 10px;
+	position: relative;
+		background:transparent url("ninja.png" );
+		  background-position: 10px 10px; 
+		
+		
+	}
+	

@@ -1,0 +1,26 @@
+﻿@model People.Models.PersonFormModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="Container">
+        
+
+        <span class="success"> Success  Failure </span>
+        <div class="editor-label">
+            <div class="mypeople">  Add a new Person</div>
+            <span class="idnumber"> ID Number</span class="idnumber"> <input type="search" id="Search" value=" " />  <input type="button" id="search-button" value="Search" />    
+        </div>
+        <div id="lookupDiv">
+       
+        </div >
+    </div>
+}
+
+
